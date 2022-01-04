@@ -1,6 +1,6 @@
-# Create Medication Card document
+# Medication Card document
 
-In a primary system, different medications are documented in a treatment context. Primary systems can use this transaction to generate a Medication Card document with the help of the Content Creator.
+In a primary system, different medications are documented in a treatment context. Primary systems can use this Exchange Format to generate a Medication Card document with the help of the Content Creator.
 
 ## Information about the patient
 
