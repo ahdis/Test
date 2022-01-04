@@ -2,16 +2,20 @@
 
 ## Medication Card document
 
-**[Create medication Card](../main/files/Create_MedCard.md)** - Create a Medication Card Document in FHIR
+**[Medication Card document](../main/files/Create_MedCard.md)** - Complete overview about the current Medication from the patient
 
-**[Import eMedication Card](../main/files/Import_MedCard.md)** - Import discrete data elements from the Medication Card document
+<!--**[Import eMedication Card](../main/files/Import_MedCard.md)** - Import discrete data elements from the Medication Card document-->
 
 ## eMedication Documents
 
-**[Create eMedication Documents](../main/files/Create_Doc.md)** - Create a Medication Card Document in FHIR
+**[Medication Treatment Plan document](../main/files/Create_Doc.md)** - Documents the prescription of a medication
 
-**[Import eMedication Documents](../main/files/Import_Doc.md)** - Create a Medication Card Document in FHIR
+**[Medication Dispense document](../main/files/Import_Doc.md)** - Documents the Dispense
 
-**[Import eMedication Documents Data](../main/files/Import_Doc_Data.md)** - Create a Medication Card Document in FHIR
+**[Medication List document](../main/files/Import_Doc_Data.md)** - Overview of the previous and current medication of the patient
 
-**[Import eMedication Documents PDF](../main/files/Import_Doc_PDF.md)** - Create a Medication Card Document in FHIR
+**[Pharmaceutical Advice document](../main/files/Import_Doc_PDF.md)** - Documents the pharmaceutical Advice
+
+**[Medication Prescription document](../main/files/Import_Doc_PDF.md)** - Electronic form of a prescription of a medication
+
+
