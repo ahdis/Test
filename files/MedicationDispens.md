@@ -178,6 +178,7 @@ The resource Practionier indicates which Practionier has prescribed a medication
       }
     },
 ```
+
 ## Information about the patient
 
 In the "Patient" resource, the demographic and administrative data of a patient are specified.
