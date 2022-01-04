@@ -2,6 +2,27 @@
 
 In a primary system, different medications are documented in a treatment context. Primary systems can use this Exchange Format to generate a Medication Card document with the help of the Content Creator.
 
+## Information about the practitioner
+
+The resource Practionier indicates which Practionier has prescribed a medication
+
+```
+"resource": {
+                "resourceType": "Practitioner",
+                "id": "c23e26e7-cbb9-4155-9117-ae31163c833f",
+                "identifier": [{
+                        "system": "urn:oid:2.51.1.3",
+                        "value": "7601003180268"
+                    }
+                ],
+                "name": [{
+                        "family": "Crausaz",
+                        "given": ["Christophe"]
+                    }
+                ]
+            }
+```
+
 ## Information about the patient
 
 In the "Patient" resource, the demographic and administrative data of a patient are specified.
@@ -151,7 +172,24 @@ The ingredient is defined with value and unit for the active ingredient quantity
                             }
                         ]
 ```
-The resonCode indicates the reason for the medication
+
+Subject indicates the reference of the patient
+
+```
+ "subject": {
+                    "reference": "Patient/69d661eb-e3ed-4e86-b34c-b5e747c13021"
+                },
+```
+
+The "informationSource" indicates which practitioner has prescribed the drug.
+
+```
+"informationSource": {
+                    "reference": "Practitioner/c23e26e7-cbb9-4155-9117-ae31163c833f"
+                },
+```
+
+The resonCode indicates the reason for the medication.
 
 ```
 "reasonCode": [{
