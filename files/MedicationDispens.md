@@ -179,36 +179,6 @@ The resource Practionier indicates which Practionier has prescribed a medication
     },
 ```
 
-## Information about the patient
-
-In the "Patient" resource, the demographic and administrative data of a patient are specified.
-
-```
-"resource": {
-        "resourceType": "Practitioner",
-        "id": "FamilienHausarzt",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 7601000234438</p><p><b>name</b>: Familien Hausarzt </p></div>"
-        },
-        "identifier": [
-          {
-            "system": "urn:oid:2.51.1.3",
-            "value": "7601000234438"
-          }
-        ],
-        "name": [
-          {
-            "family": "Hausarzt",
-            "given": [
-              "Familien"
-            ]
-          }
-        ]
-      }
-    },
-```
-
 ## Information about the organization
 
 The resource stores the information about the organization that create the Medication Card document.
