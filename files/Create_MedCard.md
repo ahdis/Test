@@ -2,9 +2,48 @@
 
 In a primary system, different medications are documented in a treatment context. Primary systems can use this transaction to generate a Medication Card document with the help of the Content Creator.
 
+#### Information about the patient
+
+In the "Patient" resource, the demographic and administrative data of a patient are specified.
+
 ```
-1 Test
-2 Test2
+"resource": {
+                "resourceType": "Patient",
+                "id": "69d661eb-e3ed-4e86-b34c-b5e747c13021",
+                "identifier": [{
+                        "system": "urn:oid:2.99",
+                        "value": "1.3.6.1.4.1.21367.2017.2.5.83|MAGMED001"
+                    }
+                ],
+                "name": [{
+                        "family": "Muster",
+                        "given": ["Petra"]
+                    }
+                ],
+                "telecom": [{
+                        "system": "phone",
+                        "value": "079 333 22 11"
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1971-09-20",
+                "address": [{
+                        "line": ["Mustergasse 4"],
+                        "city": "Zuerich",
+                        "postalCode": "8000"
+                    }
+                ],
+                "communication": [{
+                        "language": {
+                            "coding": [{
+                                    "system": "urn:ietf:bcp:47",
+                                    "code": "de-CH"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
 ```
 #### Request Message
 
