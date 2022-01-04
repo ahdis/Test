@@ -104,28 +104,18 @@ In the resource "Composition", general information about the document is specifi
     },
 ```
 
+## Information about the patient
+
+In the "Patient" resource, the demographic and administrative data of a patient are specified.
 
 ```
- "resourceType": "Patient",
-        "id": "MonikaWegmueller",
+"resource": {
+        "resourceType": "Patient",
+        "id": "MonikaWegmuellerRecipient",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Medical record number: 11111111</p><p><b>name</b>: Monika Wegmüller </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1943-05-15</p><p><b>address</b>: Wiesenstr. 12 Zürich 8003 CH </p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Monika Wegmüller </p><p><b>address</b>: Wiesenstr. 12 Zürich 8003 CH </p></div>"
         },
-        "identifier": [
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "MR"
-                }
-              ]
-            },
-            "system": "urn:oid:2.999",
-            "value": "11111111"
-          }
-        ],
         "name": [
           {
             "family": "Wegmüller",
@@ -134,8 +124,6 @@ In the resource "Composition", general information about the document is specifi
             ]
           }
         ],
-        "gender": "female",
-        "birthDate": "1943-05-15",
         "address": [
           {
             "line": [
@@ -149,6 +137,7 @@ In the resource "Composition", general information about the document is specifi
       }
     },
 ```
+
 ## Information about the practitioner
 
 The resource Practionier indicates which Practionier has prescribed a medication
@@ -205,40 +194,6 @@ The resource stores the information about the organization that create the Medic
             ],
             "city": "Zürich",
             "postalCode": "8005",
-            "country": "CH"
-          }
-        ]
-      }
-    },
-```
-
-## Information about the patient
-
-In the "Patient" resource, the demographic and administrative data of a patient are specified.
-
-```
-"resource": {
-        "resourceType": "Patient",
-        "id": "MonikaWegmuellerRecipient",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Monika Wegmüller </p><p><b>address</b>: Wiesenstr. 12 Zürich 8003 CH </p></div>"
-        },
-        "name": [
-          {
-            "family": "Wegmüller",
-            "given": [
-              "Monika"
-            ]
-          }
-        ],
-        "address": [
-          {
-            "line": [
-              "Wiesenstr. 12"
-            ],
-            "city": "Zürich",
-            "postalCode": "8003",
             "country": "CH"
           }
         ]
