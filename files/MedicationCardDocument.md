@@ -4,6 +4,8 @@ In a primary system, different medications are documented in a treatment context
 
 ## Composite
 
+In the resource "Composition", general information about the document is specified
+
 ```
 {
                 "resourceType": "Composition",
