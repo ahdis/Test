@@ -4,7 +4,7 @@
 
 **[Create medication Card](../main/files/Create_MedCard.md)** - Create a Medication Card Document in FHIR
 
-**[Import eMedication Card](../main/files/Import_MedCard.md)** - Create a Medication Card Document in FHIR
+**[Import eMedication Card](../main/files/Import_MedCard.md)** - Import discrete data elements from the Medication Card document
 
 ## eMedication Documents
 
