@@ -151,7 +151,21 @@ The ingredient is defined with value and unit for the active ingredient quantity
                             }
                         ]
 ```
+The resonCode indicates the reason for the medication
+
+```
+"reasonCode": [{
+                        "text": "Bluthochdruck/Herz"
+                    }
+```
+
 The dosage of the medication is defined in the following element.
+
+- *timing*: Timing indicates when a drug should be taken
+- *route*: Indicates the route of administration
+- *doseAndRate*: Indicates the route of administration
+
+
 
 ```
 "dosage": [{
@@ -184,4 +198,15 @@ The dosage of the medication is defined in the following element.
                         ]
                     }
                 ]
+```
+The resource "Binary" represents the Medication Card document as PDF
+
+```
+"resource": {
+                "resourceType": "Binary",
+                "id": "8affdddb-4abc-4e96-9b70-3f4cc3f003cb",
+                "language": "de-CH",
+                "contentType": "application/pdf",
+                "data": "JVBERi0xLjQKMSAwIG9iago8PAovVGl0bGU..."
+            }
 ```
