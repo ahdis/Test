@@ -1,4 +1,4 @@
-# Create and Import Medication Card document
+# Create Medication Card document
 
 ```
 1 Test
