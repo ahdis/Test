@@ -10,8 +10,8 @@
 
 **[Create eMedication Documents](../main/files/Create_Doc.md)** - Create a Medication Card Document in FHIR
 
-**[Import eMedication Documents](../main/files/Create_Doc.md)** - Create a Medication Card Document in FHIR
+**[Import eMedication Documents](../main/files/Import_Doc.md)** - Create a Medication Card Document in FHIR
 
-**[Import eMedication Documents Data](../main/files/Create_Doc.md)** - Create a Medication Card Document in FHIR
+**[Import eMedication Documents Data](../main/files/Import_Doc_Data.md)** - Create a Medication Card Document in FHIR
 
-**[Import eMedication Documents PDF](../main/files/Create_Doc.md)** - Create a Medication Card Document in FHIR
+**[Import eMedication Documents PDF](../main/files/Import_Doc_PDF.md)** - Create a Medication Card Document in FHIR
