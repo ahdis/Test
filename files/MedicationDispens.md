@@ -1,7 +1,24 @@
 # Medication Dispense document
 
+Dispensing documents the delivery of medication by a health care professional to a patient.
+
 ## Composite
 In the resource "Composition", general information about the document is specified.
+
+* *id* Local id of the resource
+* *language* Specifies the language of the document
+* *text* Presents the narrative text of the resource
+*  *extension* Extensions used
+* *identifier* A version-independent identifier for the Composition.
+* *status* The status of the document
+* *type* Specifies the particular kind of composition
+* *subject* Who or what the composition is about.
+* *author* Identifies who is responsible for the information in the composition
+* *title* Human readable label for the composite
+* *confidentiality*
+* *custodian*
+* *section*
+
 
 ```
 "resourceType": "Composition",
