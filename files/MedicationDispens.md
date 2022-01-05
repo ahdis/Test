@@ -1,7 +1,7 @@
 # Medication Dispense document
 
 ## Composite
-In the resource "Composition", general information about the document is specified,
+In the resource "Composition", general information about the document is specified.
 
 ```
 "resourceType": "Composition",
