@@ -15,9 +15,9 @@ In the resource "Composition", general information about the document is specifi
 * *subject* Who or what the composition is about.
 * *author* Identifies who is responsible for the information in the composition
 * *title* Human readable label for the composite
-* *confidentiality*
-* *custodian*
-* *section*
+* *confidentiality* Level of confidentiality of the Composition
+* *custodian* Organization who is responsible for the document and access 
+* *section* The root of the sections that make up the composition.
 
 
 ```
@@ -224,6 +224,16 @@ In the resource "MedicationDispens" the information of the medication to be disp
 
 ## Medication
 
+* *extension*
+* *code*
+* *coding*
+* *form*
+* *text*
+* *form*
+* *amount*
+* *ingredigent*
+* *strength*
+
 ```
 "resourceType": "Medication",
             "id": "med",
@@ -337,47 +347,9 @@ In the resource "MedicationDispens" the information of the medication to be disp
         "quantity": {
           "value": 1
         },
-        "dosageInstruction": [
-          {
-            "timing": {
-              "repeat": {
-                "boundsPeriod": {
-                  "start": "2011-11-29"
-                },
-                "when": [
-                  "MORN"
-                ]
-              }
-            },
-            "route": {
-              "coding": [
-                {
-                  "system": "urn:oid:0.4.0.127.0.16.1.1.2.1",
-                  "code": "20053000",
-                  "display": "Oral use"
-                }
-              ]
-            },
-            "doseAndRate": [
-              {
-                "doseQuantity": {
-                  "value": 0.5,
-                  "unit": "Tablet (unit of presentation)",
-                  "system": "http://snomed.info/sct",
-                  "code": "732936001"
-                }
-              }
-            ]
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-                "valueUrl": "#dis.1.dosageintakemode"
-              }
-            ],
-            "text": "Morgens 1/2 Tablette nehmen"
-          }
-        ]
-      }
+        
 ```
+
+## Dosage
+
+
