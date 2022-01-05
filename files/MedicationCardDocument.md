@@ -442,46 +442,6 @@ The resonCode indicates the reason for the medication.
                     }
 ```
 
-The dosage of the medication is defined in the following element.
-
-- *timing*: Timing indicates when a drug should be taken
-- *route*: Indicates the route of administration
-- *doseAndRate*: Indicates the route of administration
-
-
-
-```
-"dosage": [{
-                        "text": "Am Morgen 1 Tabletten. Am Abend 1 Tabletten\r\nMorgens und abends je 1 Tablette nehmen"
-                    }, {
-                        "timing": {
-                            "repeat": {
-                                "boundsPeriod": {
-                                    "start": "2021-09-20T00:00:00+02:00"
-                                },
-                                "when": ["MORN", "EVE"]
-                            }
-                        },
-                        "route": {
-                            "coding": [{
-                                    "system": "urn:oid:0.4.0.127.0.16.1.1.2.1",
-                                    "code": "20053000",
-                                    "display": "zum Einnehmen"
-                                }
-                            ]
-                        },
-                        "doseAndRate": [{
-                                "doseQuantity": {
-                                    "value": 1,
-                                    "unit": "Stk",
-                                    "system": "http://unitsofmeasure.org",
-                                    "code": "{Piece}"
-                                }
-                            }
-                        ]
-                    }
-                ]
-```
 The resource "Binary" represents the Medication Card document as PDF
 
 ```
