@@ -224,15 +224,14 @@ In the resource "MedicationDispens" the information of the medication to be disp
 
 ## Medication
 
-* *extension*
-* *code*
-* *coding*
-* *form*
-* *text*
-* *form*
-* *amount*
-* *ingredigent*
-* *strength*
+* *extension* Details of Extension to present additional information
+* *code* A code (or set of codes) that specify this medication, or a textual description if no code is available.
+* *coding* A reference to a code defined by a terminology system.
+* *form* Describes the form of the medication. Powder; tablets; capsule.
+* *text* Human readable text
+* *amount* A relationship of two Quantity values - expressed as a numerator and a denominator.
+* *ingredigent*  Particular ingredient of a medication
+* *strength* A relationship of two Quantity values - expressed as a numerator and a denominator.
 
 ```
 "resourceType": "Medication",
@@ -351,5 +350,53 @@ In the resource "MedicationDispens" the information of the medication to be disp
 ```
 
 ## Dosage
+* *timing* when the medication should be taken
+* *route* Indicates the route of administration
+* *doseAndRate* The amount of medication administered.
 
+```
+"dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2011-11-29"
+                },
+                "when": [
+                  "MORN"
+                ]
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:0.4.0.127.0.16.1.1.2.1",
+                  "code": "20053000",
+                  "display": "Oral use"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 0.5,
+                  "unit": "Tablet (unit of presentation)",
+                  "system": "http://snomed.info/sct",
+                  "code": "732936001"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+                "valueUrl": "#dis.1.dosageintakemode"
+              }
+            ],
+            "text": "Morgens 1/2 Tablette nehmen"
+          }
+        ]
+      }
+```
 
