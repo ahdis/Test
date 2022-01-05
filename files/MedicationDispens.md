@@ -5,19 +5,19 @@ Dispensing documents the delivery of medication by a health care professional to
 ## Composite
 In the resource "Composition", general information about the document is specified.
 
-* *id* Local id of the resource
-* *language* Specifies the language of the document
-* *text* Presents the narrative text of the resource
-*  *extension* Extensions used
-* *identifier* A version-independent identifier for the Composition.
-* *status* The status of the document
-* *type* Specifies the particular kind of composition
-* *subject* Who or what the composition is about.
-* *author* Identifies who is responsible for the information in the composition
-* *title* Human readable label for the composite
-* *confidentiality* Level of confidentiality of the Composition
-* *custodian* Organization who is responsible for the document and access 
-* *section* The root of the sections that make up the composition.
+* *id:* Local id of the resource
+* *language:* Specifies the language of the document
+* *text:* Presents the narrative text of the resource
+* *extension:* Extensions used
+* *identifier:* A version-independent identifier for the Composition.
+* *status:* The status of the document
+* *type:* Specifies the particular kind of composition
+* *subject:* Who or what the composition is about.
+* *author:* Identifies who is responsible for the information in the composition
+* *title:* Human readable label for the composite
+* *confidentiality:* Level of confidentiality of the Composition
+* *custodian:* Organization who is responsible for the document and access 
+* *section:* The root of the sections that make up the composition.
 
 
 ```
@@ -224,14 +224,14 @@ In the resource "MedicationDispens" the information of the medication to be disp
 
 ## Medication
 
-* *extension* Details of Extension to present additional information
-* *code* A code (or set of codes) that specify this medication, or a textual description if no code is available.
-* *coding* A reference to a code defined by a terminology system.
-* *form* Describes the form of the medication. Powder; tablets; capsule.
-* *text* Human readable text
-* *amount* A relationship of two Quantity values - expressed as a numerator and a denominator.
-* *ingredigent*  Particular ingredient of a medication
-* *strength* A relationship of two Quantity values - expressed as a numerator and a denominator.
+* *extension:* Details of Extension to present additional information
+* *code:* A code (or set of codes) that specify this medication, or a textual description if no code is available.
+* *coding:* A reference to a code defined by a terminology system.
+* *form:* Describes the form of the medication. Powder; tablets; capsule.
+* *text:* Human readable text
+* *amount:* A relationship of two Quantity values - expressed as a numerator and a denominator.
+* *ingredigent:*  Particular ingredient of a medication
+* *strength:* A relationship of two Quantity values - expressed as a numerator and a denominator.
 
 ```
 "resourceType": "Medication",
@@ -350,9 +350,9 @@ In the resource "MedicationDispens" the information of the medication to be disp
 ```
 
 ## Dosage
-* *timing* when the medication should be taken
-* *route* Indicates the route of administration
-* *doseAndRate* The amount of medication administered.
+* *timing:* when the medication should be taken
+* *route:* Indicates the route of administration
+* *doseAndRate:* The amount of medication administered.
 
 ```
 "dosageInstruction": [
