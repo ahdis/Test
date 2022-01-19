@@ -479,7 +479,7 @@ In the following resource "MedicationStatement" the data of the patient's medica
  71    },
 ```
 
-The resource "Binary" represents the Medication Card document as PDF
+The resource "Binary" represents the original representation of the Medication Card document
 
 ```
   1 "resource": {
