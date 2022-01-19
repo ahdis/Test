@@ -262,8 +262,16 @@ The resource stores the information about the organization that create the Medic
 In the following resource "MedicationStatement" the data of the patient's medication are specified
 
 ### Medication information
-* *id:* Details of Extension to present additional information
+* *id:* Local id of the resource
+* *text:*
+* *contained:*
+* *extension:*
+* *indentifier:*
 * *status:* Details of Extension to present additional information
+* *subject:*
+* *informationSource:*
+* *reasonCode:*
+* *note:*
 * *code:* A code (or set of codes) that specify this medication, or a textual description if no code is available.
 * *coding* A reference to a code defined by a terminology system.
 * *form* Describes the form of the medication. Powder; tablets; capsule.
