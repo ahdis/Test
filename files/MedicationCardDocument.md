@@ -6,19 +6,13 @@ In a primary system, different medications are documented in a treatment context
 
 In the resource "Composition", general information about the document is specified
 
-* *id:* Local id of the resource
-* *language:* Specifies the language of the document
-* *text:* Presents the narrative text of the resource
-* *extension:* Extensions used
-* *identifier:* A version-independent identifier for the Composition.
-* *status:* The status of the document
-* *type:* Specifies the particular kind of composition
-* *subject:* Who or what the composition is about.
-* *author:* Identifies who is responsible for the information in the composition
-* *title:* Human readable label for the composite
-* *confidentiality:* Level of confidentiality of the Composition
-* *custodian:* Organization who is responsible for the document and access 
-* *section:* The root of the sections that make up the composition.
+* *id:* Local id of the resource (line 3)
+* *language:* Specifies the language of the document (line 4)
+* *text:* Presents the narrative text of the resource (line 5 to 8)
+* *extension:* Extensions used (line 9 to 16)
+* *identifier:* A version-independent identifier for the Composition (line 17 to 20)
+* *status:* The status of the document (line 21)
+* *type:* Specifies the particular kind of composition (line 22 to 35)
 
 ```
   1 "resource": {
@@ -55,8 +49,14 @@ In the resource "Composition", general information about the document is specifi
  32              "display": "Medication summary document (record artifact)"
  33            }
  34          ]
- 35        },
- 36        "subject": {
+ 35        }, 
+```
+
+* *subject:* Who or what the composition is about (line 36 to 41)
+* *date:* The composition editing time (line 39)
+* *author:* Identifies who is responsible for the information in the composition (line 40 to 53)
+```
+ 36 "subject": {
  37          "reference": "Patient/MonikaWegmueller"
  38        },
  39        "date": "2012-02-04T14:05:00+01:00",
@@ -74,7 +74,13 @@ In the resource "Composition", general information about the document is specifi
  51            "reference": "Organization/Hausarzt"
  52          }
  53        ],
- 54        "title": "Medikationsplan",
+```
+* *title:* Human readable label for the composite
+```
+54        "title": "Medikationsplan",
+```
+* *confidentiality:* Level of confidentiality of the Composition
+```
  55        "confidentiality": "N",
  56        "_confidentiality": {
  57          "extension": [
@@ -92,9 +98,15 @@ In the resource "Composition", general information about the document is specifi
  69            }
  70          ]
  71        },
+```
+* *custodian:* Organization who is responsible for the document and access
+```
  72        "custodian": {
  73          "reference": "Organization/Custodian"
  74        },
+```
+* *section:* The root of the sections that make up the composition.
+```
  75        "section": [
  76          {
  77            "title": "Medikamentenliste",
@@ -157,7 +169,6 @@ In the resource "Composition", general information about the document is specifi
 136      }
 137    },
 ```
-
 ## Information about the practitioner
 
 The resource Practionier indicates which Practionier has prescribed a medication
