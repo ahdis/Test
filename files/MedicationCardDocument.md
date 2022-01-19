@@ -263,15 +263,15 @@ In the following resource "MedicationStatement" the data of the patient's medica
 
 ### Medication information
 * *id:* Local id of the resource
-* *text:*
-* *contained:*
-* *extension:*
-* *indentifier:*
-* *status:* Details of Extension to present additional information
-* *subject:*
-* *informationSource:*
-* *reasonCode:*
-* *note:*
+* *text:* Presents the narrative text of the resource
+* *contained:* These resources do not have an independent existence apart from the resource that contains them
+* *extension:* Extensions used
+* *indentifier:* Identifiers associated with this Medication Statement that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.
+* *status:* A code representing the status of the use of the medication
+
+
+
+* *note:* Provides extra information about the medication statement that is not conveyed by the other attributes
 * *code:* A code (or set of codes) that specify this medication, or a textual description if no code is available.
 * *coding* A reference to a code defined by a terminology system.
 * *form* Describes the form of the medication. Powder; tablets; capsule.
@@ -437,7 +437,7 @@ In the following resource "MedicationStatement" the data of the patient's medica
  71    },
 ```
 
-Subject indicates the reference of the patient
+* *subject:* The person who is taking the medication
 
 ```
   1 "subject": {
@@ -445,7 +445,7 @@ Subject indicates the reference of the patient
   3                },
 ```
 
-The "informationSource" indicates which practitioner has prescribed the drug.
+* *informationSource:* The person or organization that provided the information about the taking of this medication
 
 ```
   1 "informationSource": {
@@ -453,7 +453,7 @@ The "informationSource" indicates which practitioner has prescribed the drug.
   3                },
 ```
 
-The resonCode indicates the reason for the medication.
+* *reasonCode:* A reason for why the medication is taken
 
 ```
   1 "reasonCode": [{
