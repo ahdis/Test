@@ -169,6 +169,57 @@ In the resource "Composition", general information about the document is specifi
 136      }
 137    },
 ```
+
+## Information about the patient
+
+In the "Patient" resource, the demographic and administrative data of a patient are specified.
+
+```
+  "resource": {
+        "resourceType": "Patient",
+        "id": "MonikaWegmueller",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Medical record number: 11111111</p><p><b>name</b>: Monika Wegmüller </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1943-05-15</p><p><b>address</b>: Wiesenstr. 12 Zürich 8003 CH </p></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:2.999",
+            "value": "11111111"
+          }
+        ],
+        "name": [
+          {
+            "family": "Wegmüller",
+            "given": [
+              "Monika"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1943-05-15",
+        "address": [
+          {
+            "line": [
+              "Wiesenstr. 12"
+            ],
+            "city": "Zürich",
+            "postalCode": "8003",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+```
+
 ## Information about the practitioner
 
 The resource Practionier indicates which Practionier has prescribed a medication
@@ -190,49 +241,6 @@ The resource Practionier indicates which Practionier has prescribed a medication
  14            }
 ```
 
-## Information about the patient
-
-In the "Patient" resource, the demographic and administrative data of a patient are specified.
-
-```
-  1 "resource": {
-  2                "resourceType": "Patient",
-  3                "id": "69d661eb-e3ed-4e86-b34c-b5e747c13021",
-  4                "identifier": [{
-  5                        "system": "urn:oid:2.99",
-  6                        "value": "1.3.6.1.4.1.21367.2017.2.5.83|MAGMED001"
-  7                    }
-  8                ],
-  9                "name": [{
- 10                        "family": "Muster",
- 11                        "given": ["Petra"]
- 12                    }
- 13                ],
- 14                "telecom": [{
- 15                        "system": "phone",
- 16                        "value": "079 333 22 11"
- 17                    }
- 18                ],
- 19                "gender": "female",
- 20                "birthDate": "1971-09-20",
- 21                "address": [{
- 22                        "line": ["Mustergasse 4"],
- 23                        "city": "Zuerich",
- 24                        "postalCode": "8000"
- 25                    }
- 26                ],
- 27                "communication": [{
- 28                        "language": {
- 29                            "coding": [{
- 30                                    "system": "urn:ietf:bcp:47",
- 31                                    "code": "de-CH"
- 32                                }
- 33                            ]
- 34                        }
- 35                    }
- 36                ]
- 37            }
-```
 ## Information about the organization
 
 The resource stores the information about the organization that create the Medication Card document
@@ -262,23 +270,18 @@ The resource stores the information about the organization that create the Medic
 In the following resource "MedicationStatement" the data of the patient's medication are specified
 
 ### Medication information
-* *id:* Local id of the resource
-* *text:* Presents the narrative text of the resource
-* *contained:* These resources do not have an independent existence apart from the resource that contains them
-* *extension:* Extensions used
-* *indentifier:* Identifiers associated with this Medication Statement that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.
-* *status:* A code representing the status of the use of the medication
+* *id:* Local id of the resource (line 2)
+* *text:* Presents the narrative text of the resource (line 3, 19, 54)
+* *contained:* These resources do not have an independent existence apart from the resource that contains them (line 7 to 73)
+* *code:* A code (or set of codes) that specify this medication, or a textual description if no code is available. (line 11, 25, 35, 41, 50, 67)
+* *coding* A reference to a code defined by a terminology system. (line 12,22, 47)
+* *form* Describes the form of the medication. Powder; tablets; capsule. (line 21 to 29)
+* *amount:* A relationship of two Quantity values - expressed as a numerator and a denominator. (line 30 to 36)
+* *ingredient:*  Particular ingredient of a medication (line 44 to 71)
+* *strength:* A relationship of two Quantity values - expressed as a numerator and a denominator (line 56 to 69)
 
 
 
-* *note:* Provides extra information about the medication statement that is not conveyed by the other attributes
-* *code:* A code (or set of codes) that specify this medication, or a textual description if no code is available.
-* *coding* A reference to a code defined by a terminology system.
-* *form* Describes the form of the medication. Powder; tablets; capsule.
-* *text:* Human readable text
-* *amount:* A relationship of two Quantity values - expressed as a numerator and a denominator.
-* *ingredigent:*  Particular ingredient of a medication
-* *strength:* A relationship of two Quantity values - expressed as a numerator and a denominator.
 
 
 ```
@@ -356,13 +359,52 @@ In the following resource "MedicationStatement" the data of the patient's medica
  72          }
  73        ],
 ```
+* *indentifier:* Identifiers associated with this Medication Statement that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate
+
+```
+  1 "identifier": [
+  2        {
+  3          "system": "urn:ietf:rfc:3986",
+  4          "value": "urn:uuid:d0f885ca-afa6-4e7e-905d-f7698f9607aa"
+  5        }
+  6      ],
+```
+* *status:* A code representing the status of the use of the medication
+
+```
+  1 "status": "completed",
+```
+* *subject:* The person who is taking the medication
+
+```
+  1 "subject": {
+  2                    "reference": "Patient/69d661eb-e3ed-4e86-b34c-b5e747c13021"
+  3                },
+```
+
+* *reasonCode:* A reason for why the medication is taken
+
+```
+  1 "reasonCode": [{
+  2                        "text": "Bluthochdruck/Herz"
+  3                    }
+```
+* *note:* Provides extra information about the medication statement that is not conveyed by the other attributes
+
+```
+ 1 "note": [
+ 2         {
+ 3           "text": "-"
+ 4         }
+ 5       ],
+```
 
 ## Dosage
 
-* *text:* Free text dosage instructions e.g. SIG.
-* *timing:* when the medication should be taken
-* *route:* Indicates the route of administration
-* *doseAndRate:* The amount of medication administered.
+* *text:* Free text dosage instructions e.g. SIG. (line 3)
+* *timing:* when the medication should be taken (line 7 to 16)
+* *route:* Indicates the route of administration (line 17 to 25)
+* *doseAndRate:* The amount of medication administered (line 26 to 36)
 ```
   1 "dosage": [
   2          {
@@ -435,30 +477,6 @@ In the following resource "MedicationStatement" the data of the patient's medica
  69        ]
  70      }
  71    },
-```
-
-* *subject:* The person who is taking the medication
-
-```
-  1 "subject": {
-  2                    "reference": "Patient/69d661eb-e3ed-4e86-b34c-b5e747c13021"
-  3                },
-```
-
-* *informationSource:* The person or organization that provided the information about the taking of this medication
-
-```
-  1 "informationSource": {
-  2                    "reference": "Practitioner/c23e26e7-cbb9-4155-9117-ae31163c833f"
-  3                },
-```
-
-* *reasonCode:* A reason for why the medication is taken
-
-```
-  1 "reasonCode": [{
-  2                        "text": "Bluthochdruck/Herz"
-  3                    }
 ```
 
 The resource "Binary" represents the Medication Card document as PDF
