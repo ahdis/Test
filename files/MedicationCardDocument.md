@@ -175,49 +175,49 @@ In the resource "Composition", general information about the document is specifi
 In the "Patient" resource, the demographic and administrative data of a patient are specified.
 
 ```
-  "resource": {
-        "resourceType": "Patient",
-        "id": "MonikaWegmueller",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Medical record number: 11111111</p><p><b>name</b>: Monika Wegmüller </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1943-05-15</p><p><b>address</b>: Wiesenstr. 12 Zürich 8003 CH </p></div>"
-        },
-        "identifier": [
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "MR"
-                }
-              ]
-            },
-            "system": "urn:oid:2.999",
-            "value": "11111111"
-          }
-        ],
-        "name": [
-          {
-            "family": "Wegmüller",
-            "given": [
-              "Monika"
-            ]
-          }
-        ],
-        "gender": "female",
-        "birthDate": "1943-05-15",
-        "address": [
-          {
-            "line": [
-              "Wiesenstr. 12"
-            ],
-            "city": "Zürich",
-            "postalCode": "8003",
-            "country": "CH"
-          }
-        ]
-      }
-    },
+  1  "resource": {
+  2      "resourceType": "Patient",
+  3      "id": "MonikaWegmueller",
+  4      "text": {
+  5        "status": "generated",
+  6        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Medical record number: 11111111</p><p><b>name</b>: Monika Wegmüller </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1943-05-15</p><p><b>address</b>: Wiesenstr. 12 Zürich 8003 CH </p></div>"
+  7      },
+  8     "identifier": [
+  9        {
+ 10           "type": {
+ 11             "coding": [
+ 12               {
+ 13                 "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+ 14                 "code": "MR"
+ 15               }
+ 16             ]
+ 17           },
+ 18           "system": "urn:oid:2.999",
+ 19           "value": "11111111"
+ 20         }
+ 21       ],
+ 22       "name": [
+ 23         {
+ 24           "family": "Wegmüller",
+ 25           "given": [
+ 26             "Monika"
+ 27           ]
+ 28         }
+ 29       ],
+ 30       "gender": "female",
+ 31       "birthDate": "1943-05-15",
+ 32       "address": [
+ 33         {
+ 34           "line": [
+ 35             "Wiesenstr. 12"
+ 36           ],
+ 37           "city": "Zürich",
+ 38           "postalCode": "8003",
+ 39           "country": "CH"
+ 40         }
+ 41       ]
+ 42     }
+ 43   },
 ```
 
 ## Information about the practitioner
@@ -392,11 +392,11 @@ In the following resource "MedicationStatement" the data of the patient's medica
 * *note:* Provides extra information about the medication statement that is not conveyed by the other attributes
 
 ```
- 1 "note": [
- 2         {
- 3           "text": "-"
- 4         }
- 5       ],
+  1 "note": [
+  2         {
+  3           "text": "-"
+  4         }
+  5       ],
 ```
 
 ## Dosage
